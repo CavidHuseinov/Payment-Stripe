@@ -1,0 +1,17 @@
+D:\Projects\Ecommerce\Ecommerce.DAL\bin\Debug\net8.0\Ecommerce.DAL.deps.json
+D:\Projects\Ecommerce\Ecommerce.DAL\bin\Debug\net8.0\Ecommerce.DAL.runtimeconfig.json
+D:\Projects\Ecommerce\Ecommerce.DAL\bin\Debug\net8.0\Ecommerce.DAL.dll
+D:\Projects\Ecommerce\Ecommerce.DAL\bin\Debug\net8.0\Ecommerce.DAL.pdb
+D:\Projects\Ecommerce\Ecommerce.DAL\bin\Debug\net8.0\Ecommerce.Core.dll
+D:\Projects\Ecommerce\Ecommerce.DAL\bin\Debug\net8.0\Ecommerce.Core.pdb
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\Ecommerce.DAL.csproj.AssemblyReference.cache
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\Ecommerce.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\Ecommerce.DAL.AssemblyInfoInputs.cache
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\Ecommerce.DAL.AssemblyInfo.cs
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\Ecommerce.DAL.csproj.CoreCompileInputs.cache
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\Ecommerc.47BF5B95.Up2Date
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\Ecommerce.DAL.dll
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\refint\Ecommerce.DAL.dll
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\Ecommerce.DAL.pdb
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\Ecommerce.DAL.genruntimeconfig.cache
+D:\Projects\Ecommerce\Ecommerce.DAL\obj\Debug\net8.0\ref\Ecommerce.DAL.dll
