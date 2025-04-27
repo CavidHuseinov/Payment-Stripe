@@ -1,0 +1,17 @@
+D:\Projects\Ecommerce\Ecommerce.Business\bin\Release\net8.0\Ecommerce.Business.deps.json
+D:\Projects\Ecommerce\Ecommerce.Business\bin\Release\net8.0\Ecommerce.Business.dll
+D:\Projects\Ecommerce\Ecommerce.Business\bin\Release\net8.0\Ecommerce.Business.pdb
+D:\Projects\Ecommerce\Ecommerce.Business\bin\Release\net8.0\Ecommerce.Core.dll
+D:\Projects\Ecommerce\Ecommerce.Business\bin\Release\net8.0\Ecommerce.DAL.dll
+D:\Projects\Ecommerce\Ecommerce.Business\bin\Release\net8.0\Ecommerce.DAL.pdb
+D:\Projects\Ecommerce\Ecommerce.Business\bin\Release\net8.0\Ecommerce.Core.pdb
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\Ecommerce.Business.csproj.AssemblyReference.cache
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\Ecommerce.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\Ecommerce.Business.AssemblyInfoInputs.cache
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\Ecommerce.Business.AssemblyInfo.cs
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\Ecommerce.Business.csproj.CoreCompileInputs.cache
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\Ecommerc.5D2381E2.Up2Date
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\Ecommerce.Business.dll
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\refint\Ecommerce.Business.dll
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\Ecommerce.Business.pdb
+D:\Projects\Ecommerce\Ecommerce.Business\obj\Release\net8.0\ref\Ecommerce.Business.dll

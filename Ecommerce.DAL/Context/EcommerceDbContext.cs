@@ -1,4 +1,5 @@
 ﻿
+using Ecommerce.Core.Entities;
 using Ecommerce.Core.Entities.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,7 @@ namespace Ecommerce.DAL.Context
         public EcommerceDbContext(DbContextOptions options) : base(options)
         {
         }
-
+        public DbSet<Product> Products { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

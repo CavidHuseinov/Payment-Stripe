@@ -160,3 +160,11 @@ D:\Projects\Ecommerce\Ecommerce.WebAPI\obj\Debug\net8.0\ref\Ecommerce.WebAPI.dll
 D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\AutoMapper.dll
 D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\FluentValidation.dll
 D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\AWSSDK.Core.dll
+D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\AWSSDK.S3.dll
+D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Debug.dll
+D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+D:\Projects\Ecommerce\Ecommerce.WebAPI\bin\Debug\net8.0\AWSSDK.Extensions.NETCore.Setup.dll

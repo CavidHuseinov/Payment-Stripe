@@ -1,5 +1,6 @@
-﻿
-using Ecommerce.DAL.Context;
+﻿using Ecommerce.DAL.Context;
+using Ecommerce.DAL.Repositories.Implementations;
+using Ecommerce.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,8 +13,14 @@ namespace Ecommerce.DAL
         {
             services.AddDbContext<EcommerceDbContext>(opt =>
             {
-                opt.UseSqlServer(config.GetConnectionString("Default"));
+                opt.UseSqlServer(config.GetConnectionString("Deploy"));
             });
+
+            #region Repositories
+            services.AddScoped(typeof(ICommandRepo<>), typeof(CommandRepo<>));
+            services.AddScoped(typeof(IQueryRepo<>), typeof(QueryRepo<>));
+            #endregion
+
         }
     }
 }

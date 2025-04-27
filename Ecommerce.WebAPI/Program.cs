@@ -1,3 +1,4 @@
+using Amazon.S3;
 using Ecommerce.Business;
 using Ecommerce.DAL;
 using Ecommerce.WebAPI.Middlewares;
@@ -12,13 +13,13 @@ namespace Ecommerce.WebAPI
             var builder = WebApplication.CreateBuilder(args);
             WebAPIInstallerService.WebAPIInstaller(builder.Services,builder.Configuration);
             DALInstallerService.DALInstaller(builder.Services,builder.Configuration);
-            BusinessInstallerService.BusinessInstaller(builder.Services);
+            BusinessInstallerService.BusinessInstaller(builder.Services,builder.Configuration);
             var app = builder.Build();
             #region SeedDataForRole
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var roleManager = services.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+                var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
                 await BusinessInstallerService.SeedRoleAsync(services);
             }
             #endregion
