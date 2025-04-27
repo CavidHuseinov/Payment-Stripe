@@ -8,10 +8,10 @@ namespace Ecommerce.WebAPI.Controllers
 {
     public class CloudFlareFileUploadController:ApiController
     {
-        private readonly ICloudFlareImageService _imgService;
-        private readonly ICloudFlareVideoService _videoService;
+        private readonly IAWSImageService _imgService;
+        private readonly IAWSVideoService _videoService;
 
-        public CloudFlareFileUploadController(ICloudFlareImageService imgService, ICloudFlareVideoService videoService)
+        public CloudFlareFileUploadController(IAWSImageService imgService, IAWSVideoService videoService)
         {
             _imgService = imgService;
             _videoService = videoService;

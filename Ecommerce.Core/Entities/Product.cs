@@ -8,9 +8,9 @@ namespace Ecommerce.Core.Entities
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public ushort Price { get; set; }
+        public float Price { get; set; }
         public byte? Discount { get; set; }
         public FinalPriceVO FinalPrice =>new FinalPriceVO(Discount,Price);
-        // imgurl 
+        public string? ImgUrl { get; set; }
     }
 }

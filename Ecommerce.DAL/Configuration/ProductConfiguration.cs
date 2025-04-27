@@ -9,6 +9,7 @@ namespace Ecommerce.DAL.Configuration
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
+            builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.Name).IsRequired();
             builder.Property(x => x.Description).IsRequired();
             builder.Property(x=>x.Price).IsRequired();

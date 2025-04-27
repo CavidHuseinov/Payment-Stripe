@@ -21,8 +21,9 @@ namespace Ecommerce.Business
 
             #region Services
             services.AddScoped<IUserService,UserService>();
-            services.AddScoped<ICloudFlareImageService,CloudFlareImageService>();
-            services.AddScoped<ICloudFlareVideoService,CloudFlareVideoService>();
+            services.AddScoped<IAWSImageService,AWSImageService>();
+            services.AddScoped<AWSVideoService,AWSVideoService>();
+            services.AddScoped<IProductService,ProductService>();
             #endregion
         }
 

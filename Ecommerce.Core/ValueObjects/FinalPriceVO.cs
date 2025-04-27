@@ -3,9 +3,9 @@ namespace Ecommerce.Core.ValueObjects
 {
     public class FinalPriceVO
     {
-        public ushort FinalPrice {  get; set; }
+        public float FinalPrice {  get; set; }
 
-        public FinalPriceVO(byte? discount , ushort price)
+        public FinalPriceVO(byte? discount , float price)
         {
             if (discount == null)
             {
@@ -13,7 +13,7 @@ namespace Ecommerce.Core.ValueObjects
             }
             else
             {
-                FinalPrice =(ushort)(price - ((price * discount.Value) / 100));
+                FinalPrice =(price - ((price * discount.Value) / 100));
             }
         }
     }

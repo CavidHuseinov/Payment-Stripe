@@ -1,4 +1,5 @@
 ﻿using Ecommerce.DAL.Context;
+using Ecommerce.DAL.IUO;
 using Ecommerce.DAL.Repositories.Implementations;
 using Ecommerce.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,8 @@ namespace Ecommerce.DAL
             #region Repositories
             services.AddScoped(typeof(ICommandRepo<>), typeof(CommandRepo<>));
             services.AddScoped(typeof(IQueryRepo<>), typeof(QueryRepo<>));
+            services.AddScoped<IProductRepo,ProductRepo>();
+            services.AddScoped<IUnitOfWorks,UnitOfWorks>();
             #endregion
 
         }
