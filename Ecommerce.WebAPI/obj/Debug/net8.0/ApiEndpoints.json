@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "Ecommerce.WebAPI.Controllers.CloudFlareFileUploadController",
+    "ContainingType": "Ecommerce.WebAPI.Controllers.AWSFileUploadController",
     "Method": "CreateImageFile",
-    "RelativePath": "api/CloudFlareFileUpload/create-img",
+    "RelativePath": "api/AWSFileUpload/create-img",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -21,9 +21,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Ecommerce.WebAPI.Controllers.CloudFlareFileUploadController",
+    "ContainingType": "Ecommerce.WebAPI.Controllers.AWSFileUploadController",
     "Method": "CreateVideoFile",
-    "RelativePath": "api/CloudFlareFileUpload/create-video",
+    "RelativePath": "api/AWSFileUpload/create-video",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -36,6 +36,74 @@
       {
         "Name": "FolderName",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.WebAPI.Controllers.CartController",
+    "Method": "GetByUser",
+    "RelativePath": "api/Cart/user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.WebAPI.Controllers.CartItemController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/CartItem",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.WebAPI.Controllers.CartItemController",
+    "Method": "GetByUser",
+    "RelativePath": "api/CartItem/all-cart-item",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.WebAPI.Controllers.CartItemController",
+    "Method": "CreateCartItemAsync",
+    "RelativePath": "api/CartItem/create-cartItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Ecommerce.Business.Helpers.DTOs.CartItem.CreateCartItemDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.WebAPI.Controllers.CartItemController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/CartItem/get-by-id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
         "IsRequired": false
       }
     ],

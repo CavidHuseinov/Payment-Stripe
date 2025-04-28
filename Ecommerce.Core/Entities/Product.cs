@@ -12,5 +12,6 @@ namespace Ecommerce.Core.Entities
         public byte? Discount { get; set; }
         public FinalPriceVO FinalPrice =>new FinalPriceVO(Discount,Price);
         public string? ImgUrl { get; set; }
+        public ICollection<CartItem>? CartItems { get; set; }
     }
 }

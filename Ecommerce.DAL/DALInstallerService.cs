@@ -14,7 +14,7 @@ namespace Ecommerce.DAL
         {
             services.AddDbContext<EcommerceDbContext>(opt =>
             {
-                opt.UseSqlServer(config.GetConnectionString("Deploy"));
+                opt.UseSqlServer(config.GetConnectionString("Default"));
             });
 
             #region Repositories
@@ -22,6 +22,8 @@ namespace Ecommerce.DAL
             services.AddScoped(typeof(IQueryRepo<>), typeof(QueryRepo<>));
             services.AddScoped<IProductRepo,ProductRepo>();
             services.AddScoped<IUnitOfWorks,UnitOfWorks>();
+            services.AddScoped<ICartItemRepo,CartItemRepo>();
+            services.AddScoped<ICartRepo,CartRepo>();
             #endregion
 
         }

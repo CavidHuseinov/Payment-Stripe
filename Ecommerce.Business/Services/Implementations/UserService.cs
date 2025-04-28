@@ -1,8 +1,12 @@
 ﻿
 using AutoMapper;
+using Ecommerce.Business.Helpers.DTOs.Cart;
 using Ecommerce.Business.Helpers.DTOs.UserDto;
 using Ecommerce.Business.Services.Interfaces;
+using Ecommerce.Core.Entities;
 using Ecommerce.Core.Entities.Identity;
+using Ecommerce.DAL.IUO;
+using Ecommerce.DAL.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -21,12 +25,18 @@ namespace Ecommerce.Business.Services.Implementations
         private readonly IConfiguration _config;
         private readonly IMapper _mapper;
         private readonly IHttpContextAccessor _httpContextAccesor;
-        public UserService(IConfiguration config, UserManager<User> userManager, IMapper mapper, IHttpContextAccessor httpContextAccessor)
+        private readonly ICartRepo _commandCart;
+        private readonly IQueryRepo<Cart> _queryCart;
+        private readonly IUnitOfWorks _work;
+        public UserService(IConfiguration config, UserManager<User> userManager, IMapper mapper, IHttpContextAccessor httpContextAccessor, ICartRepo command, IQueryRepo<Cart> query, IUnitOfWorks work)
         {
             _config = config;
             _userManager = userManager;
             _mapper = mapper;
             _httpContextAccesor = httpContextAccessor;
+            _commandCart = command;
+            _queryCart = query;
+            _work = work;
         }
 
         private string GenerateAccessToken(User user, IList<string> roles)
@@ -80,6 +90,18 @@ namespace Ecommerce.Business.Services.Implementations
                 SameSite = SameSiteMode.Strict,
                 Expires = DateTime.UtcNow.AddDays(7)
             });
+
+            var existingCart = await _queryCart.GetAsync(x => x.UserId == user.Id);
+            if (existingCart == null)
+            {
+                var cart = new Cart
+                {
+                    UserId = user.Id
+                };
+                await _commandCart.CreateAsync(cart);
+                await _work.SaveChangesAsync();
+            }
+
             return new TokenDto
             {
                 AccessToken = accessToken,
