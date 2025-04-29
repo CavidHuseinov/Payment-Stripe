@@ -18,13 +18,13 @@ namespace Ecommerce.Business.Services.Implementations
 
             var s3Config = new AmazonS3Config
             {
-                ServiceURL = _config["CloudFlare:EndPointUrl"],
+                ServiceURL = _config["AWS:EndPointUrl"],
                 ForcePathStyle = true
             };
 
             _client = new AmazonS3Client(
-                _config["CloudFlare:AccessKeyId"],
-                _config["CloudFlare:SecretAccessKey"],
+                _config["AWS:AccessKeyId"],
+                _config["AWS:SecretAccessKey"],
                 s3Config);
         }
     
@@ -37,13 +37,13 @@ namespace Ecommerce.Business.Services.Implementations
             {
                 InputStream = fileUploadDto.File.OpenReadStream(),
                 Key = fileName,
-                BucketName = _config["CloudFlare:BucketName"]
+                BucketName = _config["AWS:BucketName"]
             };
 
             var transferUtility = new TransferUtility(_client);
             await transferUtility.UploadAsync(uploadRequest);
 
-            var imageUrl = $"{_config["CloudFlare:EndPointUrl"]}/{_config["CloudFlare:BucketName"]}/{fileName}";
+            var imageUrl = $"{_config["AWS:EndPointUrl"]}/{_config["AWS:BucketName"]}/{fileName}";
 
             return new ImageUrlDto
             {
