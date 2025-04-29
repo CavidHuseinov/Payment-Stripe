@@ -24,7 +24,7 @@ namespace Ecommerce.Business
             #region Services
             services.AddScoped<IUserService,UserService>();
             services.AddScoped<IAWSImageService,AWSImageService>();
-            services.AddScoped<AWSVideoService,AWSVideoService>();
+            services.AddScoped<IAWSVideoService,AWSVideoService>();
             services.AddScoped<IProductService,ProductServicee>();
             services.AddScoped<ICartItemService,CartItemService>();
             services.AddScoped<ICartService, CartService>();
