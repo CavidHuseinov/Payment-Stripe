@@ -2,6 +2,7 @@
 using AutoMapper;
 using Ecommerce.Business.Helpers.DTOs.Cart;
 using Ecommerce.Business.Helpers.DTOs.CartItem;
+using Ecommerce.Business.Helpers.DTOs.Payment;
 using Ecommerce.Business.Helpers.DTOs.Product;
 using Ecommerce.Business.Helpers.DTOs.UserDto;
 using Ecommerce.Core.Entities;
@@ -33,6 +34,16 @@ namespace Ecommerce.Business.Helpers.Mapper
             #region Cart
             CreateMap<CartDto,Cart>().ReverseMap();
             CreateMap<CreateCartDto,Cart>().ReverseMap();
+            #endregion
+
+            #region Payment
+            CreateMap<CreatePaymentDto,Payment>().ReverseMap();
+            CreateMap<PaymentDetailDto, Payment>().ReverseMap();
+            CreateMap<PaymentFilterDto, Payment>().ReverseMap();
+            CreateMap<PaymentListItemDto, Payment>().ReverseMap();
+            CreateMap<PaymentResponseDto, Payment>().ReverseMap();
+            CreateMap<PaymentResultDto, Payment>().ReverseMap();
+            CreateMap<RefundPaymentDto, Payment>().ReverseMap();
             #endregion
         }
     }

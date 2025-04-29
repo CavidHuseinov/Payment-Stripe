@@ -1,7 +1,6 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
 using Ecommerce.Business.Helpers.DTOs.Cart;
-using Ecommerce.Business.Services.Interfaces;
+using Ecommerce.Business.Services.Interfaces; 
 using Ecommerce.Core.Entities;
 using Ecommerce.Core.Entities.Identity;
 using Ecommerce.DAL.IUO;

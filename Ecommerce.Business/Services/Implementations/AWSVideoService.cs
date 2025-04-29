@@ -1,9 +1,7 @@
 ﻿
 using Amazon.S3;
 using Amazon.S3.Transfer;
-using Ecommerce.Business.Helpers.DTOs.FileUpload.ForImages;
 using Ecommerce.Business.Helpers.DTOs.FileUpload.ForVideos;
-using Ecommerce.Business.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
 
 namespace Ecommerce.Business.Services.Implementations

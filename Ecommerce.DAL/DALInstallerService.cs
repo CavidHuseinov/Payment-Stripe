@@ -24,6 +24,7 @@ namespace Ecommerce.DAL
             services.AddScoped<IUnitOfWorks,UnitOfWorks>();
             services.AddScoped<ICartItemRepo,CartItemRepo>();
             services.AddScoped<ICartRepo,CartRepo>();
+            services.AddScoped<IPaymentRepo,PaymentRepo>();
             #endregion
 
         }
