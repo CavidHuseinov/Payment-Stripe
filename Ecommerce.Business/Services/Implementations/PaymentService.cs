@@ -1,4 +1,4 @@
-﻿
+
 using Ecommerce.Business.Helpers.DTOs.Payment;
 using Ecommerce.Business.Services.Interfaces;
 using Ecommerce.Core.Entities;
@@ -33,7 +33,7 @@ namespace Ecommerce.Business.Services.Implementations
 
         public async Task<PaymentResultDto> ProcessPaymentAsync(CreatePaymentDto paymentDto)
         {
-            // Stripe ile paymentIntent oluşturma
+            
             var options = new PaymentIntentCreateOptions
             {
                 Amount = (long)(paymentDto.TotalPrice * 100),
@@ -51,7 +51,7 @@ namespace Ecommerce.Business.Services.Implementations
             };
             var intent = await new PaymentIntentService().CreateAsync(options);
 
-            // Entity oluşturma
+           
             var payment = new Payment
             {
                 Id = Guid.NewGuid(),
@@ -67,7 +67,7 @@ namespace Ecommerce.Business.Services.Implementations
                 CartId = paymentDto.CardId
             };
 
-            // Son 4 haneyi çekme (opsiyonel)
+            
             try
             {
                 var pm = await new PaymentMethodService().GetAsync(intent.PaymentMethod.ToString()!);
@@ -75,11 +75,11 @@ namespace Ecommerce.Business.Services.Implementations
             }
             catch { }
 
-            // SAVE
+         
             await _command.CreateAsync(payment);
             await _work.SaveChangesAsync();
 
-            // DTO hazırlama
+         
             var result = new PaymentResultDto
             {
                 PaymentIntentId = intent.Id,
